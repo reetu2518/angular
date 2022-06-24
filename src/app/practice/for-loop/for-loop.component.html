@@ -1,0 +1,7 @@
+<h3>{{title}}</h3>
+<ul *ngFor="let item of users">
+    <li>{{item.name}} => {{item.email}}</li>
+    <ul *ngFor="let sub of item.hobby">
+        <li>{{sub}}</li>
+    </ul>
+</ul>

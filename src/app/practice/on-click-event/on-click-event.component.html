@@ -1,0 +1,18 @@
+<h1 class="mb-3" (mouseover)="getVal('over')">{{title}} here</h1>
+
+<ng-template [ngIf]="color==='red'">
+    <h4 class="mb-3" style="color: red;">{{data}}</h4>
+</ng-template>
+<ng-template [ngIf]="color==='green'">
+    <h4 class="mb-3" style="color: rgb(20, 236, 63);">{{data}}</h4>
+</ng-template>
+
+<input type="text" placeholder="Event Keypress" #id1 (keypress)="getVal(id1.value)" />
+<input type="text" placeholder="Event Keyup and property biding" #id2 (keyup)="getVal(id2.value)" [disabled]=disabled />
+<br>
+<button class="btn btn-outline-light btn-lg" (click)="getName('Click ABC', 'Second Parameter')" role="button">Call to
+    action</button>
+<br>
+<h2>{{displayVal}}</h2>
+<input type="text" placeholder="Get value on click of button" #id3 />
+<button class="btn btn-primary" (click)="getVal2(id3.value)" role="button">Call to action</button>
