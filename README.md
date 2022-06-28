@@ -17,7 +17,7 @@ Angular interpolation is used display a component property in the respective vie
 
 ### Angular-CLI: 
 The Angular CLI is the fastest, straightforward, and recommended way to develop Angular applications. The Angular CLI makes a number of tasks trouble-free.
-####Commands Eg: ng-build, ng-serve, ng generate, ng test, ng e2e
+#### Commands Eg: ng-build, ng-serve, ng generate, ng test, ng e2e
 
 ### Module: 
 A module is a mechanism to group components, directives, pipes and service that are related.
