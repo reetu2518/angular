@@ -1,8 +1,8 @@
 # Angular
 Angular is a TypeScript-based free and open-source web application framework.
-### Install Angular: npm install -g @angular/cli
-### To check: ng version
-### Create New Project: ng new ProjectName
+#### Install Angular: npm install -g @angular/cli
+#### To check: ng version
+#### Create New Project: ng new ProjectName
 
 
 ### Components:
