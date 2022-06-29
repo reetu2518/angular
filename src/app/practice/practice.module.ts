@@ -5,8 +5,11 @@ import { OnClickEventComponent } from './on-click-event/on-click-event.component
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { PipesComponent } from './pipes/pipes.component';
-import { FormsModule } from '@angular/forms';
 import { UsdInrPipe } from './pipes/usd-inr.pipe';
+import { FormsComponent } from './forms/forms.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RedEleDirective } from './directives/red-ele.directive';
+// import {  } from '@angular/forms';
 
 
 
@@ -17,18 +20,23 @@ import { UsdInrPipe } from './pipes/usd-inr.pipe';
     ParentComponent,
     ChildComponent,
     PipesComponent,
-    UsdInrPipe
+    UsdInrPipe,
+    FormsComponent,
+    RedEleDirective
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports : [
     ForLoopComponent,
     OnClickEventComponent,
     ParentComponent,
     ChildComponent,
-    PipesComponent
+    PipesComponent,
+    FormsComponent,
+    RedEleDirective
   ]
 })
 export class PracticeModule { }

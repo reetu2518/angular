@@ -1,0 +1,41 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <h3 class="text-center text-primary">Angular forms!</h3>
+        </div>
+        <div class="col-md-6">
+            <h4 class="mb-3">Template Drive Form</h4>
+            <form #templateDrive="ngForm" (ngSubmit)=userLogin(templateDrive.value) class="mb-3">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" ngModel placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">After Submit Email : </small>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password</label>
+                    <input type="password" class="form-control" id="pwd" name="password" ngModel placeholder="Password">
+                    <small id="emailHelp" class="form-text text-muted">After Submit Password : </small>
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+            <button class="btn btn-dark" (click)=userLogin(templateDrive.value)>On click get value of from out form</button>
+        </div>
+        <div class="col-md-6">
+            <h4 class="mb-3">Reactive Form</h4>
+            <form [formGroup]=loginForm (ngSubmit)="loginUser()">
+                <div class="form-group">
+                  <label for="Email">Email address</label>
+                  <input type="email" class="form-control" id="Email" name="email" placeholder="Enter email" formControlName="email">
+                  <small class="form-text text-danger" *ngIf="email && email.invalid && email.touched">This field is invalid and required</small>
+                </div>
+                <div class="form-group">
+                    <label for="Pwd">Password</label>
+                    <input type="password" class="form-control" id="Pwd" name="password" placeholder="Password" formControlName="password">
+                    <small class="form-text text-danger" *ngIf="password && password.invalid && password.touched">This field is invalid and required</small>
+                </div>
+                <button [disabled]="loginForm.invalid" class="btn btn-success">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>

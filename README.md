@@ -28,7 +28,7 @@ Interpolation treats boolean value as string whereas property binding doesn't tr
 
 ### Pipes : 
 Use pipes to transform strings, currency amounts, dates, and other data for display.
-####	For creating custom pipe: ng g p pipeName
+#### For creating custom pipe: ng g p pipeName
 
 ### Forms:
 #### a) Template Driven: 
@@ -38,3 +38,7 @@ Mostly work done in the Component template
 Mostly work done in the Component class
 
 #### Data Flow: Template -> Class -> Service -> DB
+
+### Directives:
+Directives are classes that add additional behavior to elements in your Angular applications. Use Angular's built-in directives to manage forms, lists, styles, and what users see.
+#### ng g directive directiveName
