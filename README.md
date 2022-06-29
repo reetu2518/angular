@@ -25,3 +25,16 @@ A module is a mechanism to group components, directives, pipes and service that 
 
 ### Property Binding:
 Interpolation treats boolean value as string whereas property binding doesn't treats boolean value as string.
+
+### Pipes : 
+Use pipes to transform strings, currency amounts, dates, and other data for display.
+####	For creating custom pipe: ng g p pipeName
+
+### Forms:
+#### a) Template Driven: 
+Mostly work done in the Component template
+
+#### b) Reactive Form:
+Mostly work done in the Component class
+
+#### Data Flow: Template -> Class -> Service -> DB

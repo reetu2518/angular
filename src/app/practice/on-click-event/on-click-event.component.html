@@ -10,9 +10,12 @@
 <input type="text" placeholder="Event Keypress" #id1 (keypress)="getVal(id1.value)" />
 <input type="text" placeholder="Event Keyup and property biding" #id2 (keyup)="getVal(id2.value)" [disabled]=disabled />
 <br>
-<button class="btn btn-outline-light btn-lg" (click)="getName('Click ABC', 'Second Parameter')" role="button">Call to
+<button class="btn btn-info" (click)="getName('Click ABC', 'Second Parameter')" role="button">Call to
     action</button>
 <br>
 <h2>{{displayVal}}</h2>
 <input type="text" placeholder="Get value on click of button" #id3 />
 <button class="btn btn-primary" (click)="getVal2(id3.value)" role="button">Call to action</button>
+
+<h3>Send Data child to parent component</h3>
+<p>{{item}}</p>

@@ -1,0 +1,31 @@
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="mb-3">Two Way Binding and Template Reference!</h3>
+            <input type="text" [(ngModel)]="twoWayBinding" />
+    
+            <p>Two Way Binding: {{twoWayBinding}}</p>
+    
+            <input type="text" [(ngModel)]="userName" readonly style="width:500px">
+            <br><br>
+            <input type="text" #inputBox style="width:400px" placeholder="Template Reference Variable">
+    
+            <p>Template Reference Variable</p>
+            <button (click)="setName(inputBox.value)">Click</button>
+    
+        </div>
+        <div class="col-md-6">
+            <h3 class="mb-3">Angular Pipes!</h3>
+            <p>Uppercase: {{name | uppercase}}</p>
+            <p>Lower Case: {{name | lowercase}}</p>
+            <p>Title Case: {{name | titlecase }}</p>
+            <p>Date: {{today | date: 'fullDate'}}</p>
+            <p>Pipes with Params: {{name | slice : 2 : 4 }}</p>
+            <p>JSON Pipes, with another pipe: {{user | json | titlecase}}</p>
+            <p>Number pipe: {{2000.3015555 | number:  '2.2-3'}}</p>
+            <p>Currency pipe: {{200 | currency:  'INR'}}</p>
+            <p>Custom pipe: {{20 | usdInr : 30}}</p>
+        </div>
+    </div>
+</div>
+

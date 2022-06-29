@@ -3,20 +3,39 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-for-loop',
   templateUrl: './for-loop.component.html',
-  styleUrls: ['./for-loop.component.css']
+  styleUrls: ['./for-loop.component.css'],
 })
 export class ForLoopComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
+  title = 'Nested Loop and Dynamic Style Binding';
+  color = 'green';
+  bgColor = 'yellow';
 
-  ngOnInit(): void {
+  updateColor() {
+    this.color = 'grey';
+    this.bgColor = 'pink';
   }
-  title = "Nested Loop";
 
   users = [
-    {name : "abc", email : "test@gamil.com", mobile : 989898, hobby : ['a', 'b', 'c']},
-    {name : "abcd", email : "test@gasamil.com", mobile : 2423, hobby : ['d', 'e', 'c']},
-    {name : "adc", email : "test@gamasdil.com", mobile : 2342, hobby : ['h', 'gb', 'f']}
+    {
+      name: 'abc',
+      email: 'test@gamil.com',
+      mobile: 989898,
+      hobby: ['a', 'b', 'c'],
+    },
+    {
+      name: 'abcd',
+      email: 'test@gasamil.com',
+      mobile: 2423,
+      hobby: ['d', 'e', 'c'],
+    },
+    {
+      name: 'adc',
+      email: 'test@gamasdil.com',
+      mobile: 2342,
+      hobby: ['h', 'gb', 'f'],
+    },
   ];
-
 }

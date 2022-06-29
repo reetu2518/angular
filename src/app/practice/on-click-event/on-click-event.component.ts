@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-on-click-event',
@@ -13,8 +13,10 @@ export class OnClickEventComponent implements OnInit {
   disabled: boolean = true;
   show = true;
   color = 'green';
-  title = "Input event";
+  title = "Input event and Send Data child to parent component";
   data = "get text box and display";
+
+  @Input() item = 0;
 
   getName(name: string, sec: string) {
     alert(name + ' ' + sec);
@@ -26,4 +28,5 @@ export class OnClickEventComponent implements OnInit {
   getVal2(value: string) {
     this.displayVal = value;
   }
+  
 }

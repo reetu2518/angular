@@ -1,5 +1,16 @@
 <app-header></app-header>
 <!-- <app-login></app-login> -->
-<!-- <app-on-click-event></app-on-click-event> -->
-<app-for-loop></app-for-loop>
+<!-- <app-on-click-event [item]="data"></app-on-click-event> -->
+<!-- <button (click)="updateVal()">Update Value</button> -->
+<!-- <app-for-loop></app-for-loop> -->
+
+
+<ul *ngFor="let x of users">
+    <!-- {{x.name}}
+    {{x.email}}
+    {{x.mobile}} -->
+    <!-- <app-child [item]="x"></app-child> -->
+</ul>
+
+<app-pipes></app-pipes>
 <app-footer></app-footer>

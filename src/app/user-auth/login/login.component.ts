@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -10,5 +12,12 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  userData:any = ""
+
+  getData(data:NgForm) {
+    // console.log(data);    
+    this.userData = data;
   }
 }
