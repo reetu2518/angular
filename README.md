@@ -42,3 +42,11 @@ Mostly work done in the Component class
 ### Directives:
 Directives are classes that add additional behavior to elements in your Angular applications. Use Angular's built-in directives to manage forms, lists, styles, and what users see.
 #### ng g directive directiveName
+
+#### ng generate component my-comp --module app-routing.module.ts[*]
+
+### Service
+All we have to do is create a class and add methods and properties. Then we can create an instance of this class in our Component and call its methods. One of the best uses of services is to get data from a data source.
+#### ng g service serviceName
+
+#### For Creating module routing: ng g m moduleName --routing

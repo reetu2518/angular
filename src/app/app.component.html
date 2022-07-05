@@ -4,6 +4,7 @@
 <!-- <button (click)="updateVal()">Update Value</button> -->
 <!-- <app-for-loop></app-for-loop> -->
 
+<h3 class="text-center text-primary"> {{headerInfo.name}}</h3>
 
 <ul *ngFor="let x of users">
     <!-- {{x.name}}
@@ -12,6 +13,18 @@
     <!-- <app-child [item]="x"></app-child> -->
 </ul>
 
-<app-pipes></app-pipes>
+
+<ul>
+    <li>
+        <a routerLink="admin/login">Admin Login</a>
+    </li>
+    <li>
+        <a routerLink="admin/signup">Admin SignUp</a>
+    </li>
+    <router-outlet></router-outlet>
+</ul>
+
+<!-- <app-pipes></app-pipes> -->
 <!-- <app-forms></app-forms> -->
+<!-- <app-get-api></app-get-api> -->
 <app-footer></app-footer>

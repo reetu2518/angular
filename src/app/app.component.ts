@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserdataService } from './service/userdata.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  headerInfo:any;
+  constructor(private dataa:UserdataService) {
+    this.headerInfo = dataa.info;
+  }
+
   data = 10;
   updateVal() {
     this.data = Math.floor(Math.random()*10);

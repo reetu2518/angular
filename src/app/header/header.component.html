@@ -13,6 +13,14 @@
 
     <!-- font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Data table -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"/>
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
@@ -27,19 +35,25 @@
                         <a class="nav-link" aria-current="page" routerLink="">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" routerLink="forms">Forms</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" routerLink="pipes">Pipes</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="onclickevent/1">Dynamic Routing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="onclickevent/2">Dynamic Routing</a>
+                    </li>
+                    
                     <router-outlet></router-outlet>
                 </ul>
             </div>
+            
         </div>
     </nav>
+    <div class="clearfix mb-12"></div>
     <!-- Navbar -->
 
     <!-- Background image -->
@@ -57,4 +71,4 @@
         </div>
     </div> -->
     <!-- Background image -->
-</header>
+</header> 

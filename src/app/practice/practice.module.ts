@@ -9,9 +9,9 @@ import { UsdInrPipe } from './pipes/usd-inr.pipe';
 import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RedEleDirective } from './directives/red-ele.directive';
-// import {  } from '@angular/forms';
-
-
+import { AppRoutingModule } from '../app-routing.module';
+import { GetAPIComponent } from './get-api/get-api.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,21 +22,25 @@ import { RedEleDirective } from './directives/red-ele.directive';
     PipesComponent,
     UsdInrPipe,
     FormsComponent,
-    RedEleDirective
+    RedEleDirective,
+    GetAPIComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  exports : [
+  exports: [
     ForLoopComponent,
     OnClickEventComponent,
     ParentComponent,
     ChildComponent,
     PipesComponent,
     FormsComponent,
-    RedEleDirective
-  ]
+    RedEleDirective,
+    GetAPIComponent,
+  ],
 })
-export class PracticeModule { }
+export class PracticeModule {}

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="text-info text-center mb-3 mt-3">
+                Display Get API data
+            </h4>
+            <hr>
+            <table class="table table-striped" id="dataTable">
+                <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">User Id</th>
+                      <th scope="col">Title</th>
+                      <th scope="col">Body</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                    <tr *ngFor="let info of apiData">
+                        <th scope="row">{{info.id}}</th>
+                        <td>{{info.userId}}</td>
+                        <td>{{info.title}}</td>
+                        <td>{{info.body}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

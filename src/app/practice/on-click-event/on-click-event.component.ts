@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-on-click-event',
@@ -6,15 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./on-click-event.component.css'],
 })
 export class OnClickEventComponent implements OnInit {
-  constructor() {}
+  dynamicId:any = '';
+  constructor(private route:ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dynamicId = this.route.snapshot.paramMap.get('id');
+    console.log("user id: ", this.route.snapshot.paramMap.get('id'));
+  }
+
   displayVal: string = '';
   disabled: boolean = true;
   show = true;
   color = 'green';
-  title = "Input event and Send Data child to parent component";
-  data = "get text box and display";
+  title = 'Input event and Send Data child to parent component';
+  data = 'get text box and display';
 
   @Input() item = 0;
 
@@ -28,5 +34,4 @@ export class OnClickEventComponent implements OnInit {
   getVal2(value: string) {
     this.displayVal = value;
   }
-  
 }

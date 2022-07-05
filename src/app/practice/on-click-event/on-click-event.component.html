@@ -1,21 +1,32 @@
-<h1 class="mb-3" (mouseover)="getVal('over')">{{title}} here</h1>
+<div class="contanier-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-3" (mouseover)="getVal('over')">{{title}} here, Dynamic URL: {{dynamicId}}</h2>
+        </div>
+        <div class="col-md-6">
+            <ng-template [ngIf]="color==='red'">
+                <h4 class="mb-3" style="color: red;">{{data}}</h4>
+            </ng-template>
+            <ng-template [ngIf]="color==='green'">
+                <h4 class="mb-3" style="color: rgb(20, 236, 63);">{{data}}</h4>
+            </ng-template>
 
-<ng-template [ngIf]="color==='red'">
-    <h4 class="mb-3" style="color: red;">{{data}}</h4>
-</ng-template>
-<ng-template [ngIf]="color==='green'">
-    <h4 class="mb-3" style="color: rgb(20, 236, 63);">{{data}}</h4>
-</ng-template>
+            <input type="text" placeholder="Event Keypress" #id1 (keypress)="getVal(id1.value)" class="mb-3" />
+            <br>
+            <input type="text" placeholder="Event Keyup and property biding" #id2 (keyup)="getVal(id2.value)"
+                [disabled]=disabled />
+            <br>
+            <button class="btn btn-info mt-3" (click)="getName('Click ABC', 'Second Parameter')" role="button">Call to
+                action</button>
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-3">{{displayVal}}</h2>
+            <input type="text" placeholder="Get value on click of button" #id3 />
+            <br>
+            <button class="btn btn-primary mt-3" (click)="getVal2(id3.value)" role="button">Call to action</button>
 
-<input type="text" placeholder="Event Keypress" #id1 (keypress)="getVal(id1.value)" />
-<input type="text" placeholder="Event Keyup and property biding" #id2 (keyup)="getVal(id2.value)" [disabled]=disabled />
-<br>
-<button class="btn btn-info" (click)="getName('Click ABC', 'Second Parameter')" role="button">Call to
-    action</button>
-<br>
-<h2>{{displayVal}}</h2>
-<input type="text" placeholder="Get value on click of button" #id3 />
-<button class="btn btn-primary" (click)="getVal2(id3.value)" role="button">Call to action</button>
-
-<h3>Send Data child to parent component</h3>
-<p>{{item}}</p>
+            <h3 class="mb-3">Send Data child to parent component</h3>
+            <p>{{item}}</p>
+        </div>
+    </div>
+</div>
